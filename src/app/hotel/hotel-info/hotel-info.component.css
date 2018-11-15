@@ -1,0 +1,31 @@
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+
+}
+
+.title:hover {
+  cursor: pointer;
+  text-decoration: underline blue;
+  color: blue;
+}
+
+.hotel-box {
+  height: 150px;
+}
+
+.star {
+  text-align: center;
+  color: gold;
+  font-weight: bold;
+}
+
+.phone {
+  margin-top: 20px;
+}
+
+.address {
+  margin-top: 20px;
+}

@@ -1,3 +1,4 @@
-<p>
-  rating works!
-</p>
+<ng-container [ngSwitch]="rating.available">
+  <div *ngSwitchCase="true">Hotel is available</div>
+  <div *ngSwitchCase="false">Hotel is not available</div>
+</ng-container>

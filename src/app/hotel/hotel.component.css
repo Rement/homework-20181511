@@ -1,0 +1,28 @@
+.hotel-info {
+  background-color: white;
+  height: 150px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.photo {
+  height: 150px;
+}
+
+.filter {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+
+.filter .star {
+  margin: 0 5px 0 5px;
+  color: gold;
+}
+
+.star:hover {
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -1,4 +1,8 @@
-<ng-container *ngIf="(hotels$ | async) as hotels">
-  <app-hotel [hotels]="hotels"></app-hotel>
-</ng-container>
+<div class="box" *ngIf="(hotels$ | async) as hotels">
+  <app-hotel [hotels]="hotels" class="big-box" (sendHotelData)="getData($event)"></app-hotel>
+  <div class="box-2">
+    <app-weather class="small-box" [weather]="weather" [ngClass]="backGroundStyle(weather.weatherType)"></app-weather>
+    <app-rating class="small-box" [rating]="rating"></app-rating>
+  </div>
+</div>
 

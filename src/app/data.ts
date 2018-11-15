@@ -12,6 +12,7 @@ export interface IHotel {
   address: string;
   phone: number;
   name: string;
+  startCount: number;
 }
 
 export interface IWeather {
@@ -21,7 +22,6 @@ export interface IWeather {
 
 export interface IRating {
   available: boolean;
-  startCount: number;
 }
 
 export interface IData {
@@ -36,34 +36,47 @@ const _data: IData[] = [
       img: 'assets/img/new-york.jpg',
       address: '700 Fifth Avenue at 55th Street, Нью-Йорк, NY 10019, США',
       phone: 12129562888,
-      name: 'The Peninsula New York'
+      name: 'The Peninsula New York',
+      startCount: 5
     },
     weather: {temperature: 4, weatherType: WeatherType.SUNNY},
-    rating: {available: true, startCount: 5}
+    rating: {available: true}
   },
   {
     hotel: {
       img: 'assets/img/atlantic.jpg',
       address: '100 South North Carolina Avenue, Атлантик-Сити, NJ 08401, США',
       phone: 16094494200,
-      name: 'Wyndham Skyline Tower'
+      name: 'Wyndham Skyline Tower',
+      startCount: 3
     },
     weather: {temperature: 8, weatherType: WeatherType.FOG},
-    rating: {available: false, startCount: 3}
+    rating: {available: false}
+  },
+  {
+    hotel: {
+      img: 'assets/img/new-york-2.jpg',
+      address: '129 W 46th St, New York, NY 10036, США',
+      phone: 12122212600,
+      name: 'Broadway at Times Square Hotel', startCount: 3
+    },
+    weather: {temperature: 5, weatherType: WeatherType.SUNNY},
+    rating: {available: true}
   },
   {
     hotel: {
       img: 'assets/img/san-hose.jpg',
       address: '1 Main Street, Los Altos, 94022, США',
       phone: 16509462000,
-      name: 'The Peninsula New York'
+      name: 'San Hose Hotel',
+      startCount: 4
     },
     weather: {temperature: 20, weatherType: WeatherType.SUNNY},
-    rating: {available: true, startCount: 4}
+    rating: {available: true}
   }
 ];
 
 export const data: Observable<IData[]> = of(_data)
   .pipe(
-    delay(4000)
+    delay(5000)
   );

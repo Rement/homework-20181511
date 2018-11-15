@@ -1,0 +1,14 @@
+<div class="hotel-box">
+  <div class="title" (click)="imageEvent(hotel)">
+    {{hotel.name}}
+  </div>
+  <div class="star">
+    <span>{{'\u2605'.repeat(hotel.startCount)}}</span>
+  </div>
+  <div class="phone">
+    {{'\u260E'}} {{hotel.phone | phonePipe}}
+  </div>
+  <div class="address">
+    {{hotel.address}}
+  </div>
+</div>
