@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {IWeather} from '../data';
+import {Component} from '@angular/core';
+import {EventService} from '../app.service';
 
 @Component({
   selector: 'app-weather',
@@ -8,5 +8,6 @@ import {IWeather} from '../data';
 })
 export class WeatherComponent {
 
-  @Input() weather: IWeather;
+  constructor(private eventService: EventService) {
+  }
 }

@@ -1,40 +1,23 @@
-import {AfterViewInit, Component, ElementRef} from '@angular/core';
-import {data, IData, IRating, IWeather, WeatherType} from './data';
+import {Component, OnInit} from '@angular/core';
+import {data, IData} from './data';
+import {EventService} from './app.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit {
 
   public hotels$ = data;
 
-  public weather: IWeather;
-
-  public rating: IRating;
-
-  constructor(private elementRef: ElementRef) {
-
+  constructor(private eventService: EventService) {
   }
 
-  ngAfterViewInit(): void {
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'black';
+  ngOnInit(): void {
+    this.hotels$.subscribe(
+      (hotelData: IData[]) => {
+        this.eventService.selectHotel(hotelData[0]);
+      });
   }
-
-  getData(event: IData) {
-    this.weather = event.weather;
-    this.rating = event.rating;
-  }
-
-  backGroundStyle(type: WeatherType): string {
-    if (type === WeatherType.SUNNY) {
-      return 'sunny';
-    } else if (type === WeatherType.CLOUDY) {
-      return 'cloudy';
-    } else {
-      return 'foggy';
-    }
-  }
-
 }

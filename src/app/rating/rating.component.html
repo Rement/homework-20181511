@@ -1,4 +1,6 @@
-<ng-container [ngSwitch]="rating.available">
-  <div *ngSwitchCase="true">Hotel is available</div>
-  <div *ngSwitchCase="false">Hotel is not available</div>
-</ng-container>
+<div *ngIf="(eventService.hotel$ | async)?.rating as hotelRating">
+  <ng-container [ngSwitch]="hotelRating.available">
+    <div *ngSwitchCase="true">Hotel is available</div>
+    <div *ngSwitchCase="false">Hotel is not available</div>
+  </ng-container>
+</div>

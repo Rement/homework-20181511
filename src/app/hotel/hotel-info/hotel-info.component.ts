@@ -1,5 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {IHotel} from '../../data';
+import {EventService} from '../../app.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-hotel-info',
@@ -8,12 +10,7 @@ import {IHotel} from '../../data';
 })
 export class HotelInfoComponent {
 
-  @Input() hotel: IHotel;
-
-  @Output() sendHotel: EventEmitter<IHotel> = new EventEmitter();
-
-  imageEvent(hotel: IHotel) {
-    this.sendHotel.emit(hotel);
+  constructor(private eventService: EventService) {
   }
 
 }

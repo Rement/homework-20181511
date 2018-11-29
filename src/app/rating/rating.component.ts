@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {IRating} from '../data';
+import {Component} from '@angular/core';
+import {EventService} from '../app.service';
 
 @Component({
   selector: 'app-rating',
@@ -8,5 +8,6 @@ import {IRating} from '../data';
 })
 export class RatingComponent {
 
-  @Input() rating: IRating;
+  constructor(private eventService: EventService) {
+  }
 }

@@ -1,3 +1,3 @@
-<div class="temperature">
-  <div>{{weather.temperature}}<sup>o</sup>C</div>
+<div class="temperature" *ngIf="(eventService.hotel$ | async)?.weather as hotelWeather">
+  <div>{{hotelWeather.temperature}}<sup>o</sup>C</div>
 </div>

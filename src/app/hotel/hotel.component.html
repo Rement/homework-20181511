@@ -7,6 +7,6 @@
 </div>
 <div class="hotel-info">
   <div *ngFor="let hotel of hotelGlobalData | hotelFilter: filter">
-    <app-hotel-info class="hotel-info" [hotel]="hotel" (sendHotel)="getHotel($event)"></app-hotel-info>
+    <app-hotel-info class="hotel-info" [hotel]="hotel"></app-hotel-info>
   </div>
 </div>
