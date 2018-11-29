@@ -15,8 +15,8 @@ import {EventService} from './app.service';
     AppComponent,
     WeatherComponent,
     RatingComponent,
-    // HotelComponent,
-    /*HotelInfoComponent,*/
+    HotelComponent,
+    HotelInfoComponent,
     PhonePipePipe,
     HotelFilterPipe
   ],

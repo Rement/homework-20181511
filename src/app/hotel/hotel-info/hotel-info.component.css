@@ -6,14 +6,13 @@
 
 }
 
-.title:hover {
-  cursor: pointer;
-  text-decoration: underline blue;
-  color: blue;
-}
-
 .hotel-box {
   height: 150px;
+}
+
+.hotel-box:hover {
+  background-color: rgba(169, 169, 169, .2);
+  cursor: pointer;
 }
 
 .star {

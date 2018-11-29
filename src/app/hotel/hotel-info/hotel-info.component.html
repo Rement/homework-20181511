@@ -1,14 +1,14 @@
-<div class="hotel-box">
+<div class="hotel-box" (click)="eventService.selectedHotel(data)">
   <div class="title">
-    {{hotel.name}}
+    {{data.hotel.name}}
   </div>
   <div class="star">
-    <span>{{'\u2605'.repeat(hotel.startCount)}}</span>
+    <span>{{'\u2605'.repeat(data.hotel.startCount)}}</span>
   </div>
   <div class="phone">
-    {{'\u260E'}} {{hotel.phone | phonePipe}}
+    {{'\u260E'}} {{data.hotel.phone | phonePipe}}
   </div>
   <div class="address">
-    {{hotel.address}}
+    {{data.hotel.address}}
   </div>
 </div>

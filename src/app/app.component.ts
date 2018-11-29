@@ -17,7 +17,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.hotels$.subscribe(
       (hotelData: IData[]) => {
-        this.eventService.selectHotel(hotelData[0]);
+        this.eventService.selectedHotel(hotelData[0]);
+        this.eventService.setHotels(hotelData);
       });
   }
 }

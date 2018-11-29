@@ -1,7 +1,7 @@
 <div class="box">
-  <!--  <app-hotel class="big-box"></app-hotel>-->
+  <app-hotel class="big-box"></app-hotel>
   <div class="box-2">
-    <app-weather class="small-box"></app-weather>
+    <app-weather class="small-box" [ngClass]="(eventService.hotel$ | async)?.weather.weatherType.toString().toLowerCase()"></app-weather>
     <app-rating class="small-box"></app-rating>
   </div>
 </div>

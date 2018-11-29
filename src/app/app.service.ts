@@ -5,9 +5,17 @@ import {IData} from './data';
 @Injectable()
 export class EventService {
   private _hotelClicked = new Subject<IData>();
-  hotel$ = this._hotelClicked.asObservable();
 
-  selectHotel(hotel: IData) {
+  private _allHotels = new Subject<IData[]>();
+
+  hotel$ = this._hotelClicked.asObservable();
+  allHotels$ = this._allHotels.asObservable();
+
+  selectedHotel(hotel: IData) {
     this._hotelClicked.next(hotel);
+  }
+
+  setHotels(hotels: IData[]) {
+    this._allHotels.next(hotels);
   }
 }

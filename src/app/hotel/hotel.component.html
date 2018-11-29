@@ -1,12 +1,12 @@
 <div class="photo">
-  <img [src]="image" width="300" height="150">
+  <img [src]="(eventService.hotel$ | async)?.hotel.img" width="300" height="150">
 </div>
 <div class="filter">
   <span *ngFor="let star of starRankingSet" class="star" (click)="setFilter(star)">{{'\u2605'.repeat(star)}}</span>
   <span (click)="setFilter(null)" class="star">x</span>
 </div>
 <div class="hotel-info">
-  <div *ngFor="let hotel of hotelGlobalData | hotelFilter: filter">
-    <app-hotel-info class="hotel-info" [hotel]="hotel"></app-hotel-info>
+  <div *ngFor="let hotel of allHotelInfo | hotelFilter: filter">
+    <app-hotel-info class="hotel-info" [data]="hotel"></app-hotel-info>
   </div>
 </div>

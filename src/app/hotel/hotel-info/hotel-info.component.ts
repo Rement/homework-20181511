@@ -1,7 +1,6 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {IHotel} from '../../data';
+import {Component, Input} from '@angular/core';
+import {IData, IHotel} from '../../data';
 import {EventService} from '../../app.service';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-hotel-info',
@@ -9,6 +8,8 @@ import {Observable} from 'rxjs';
   styleUrls: ['./hotel-info.component.css']
 })
 export class HotelInfoComponent {
+
+  @Input() data: IData;
 
   constructor(private eventService: EventService) {
   }

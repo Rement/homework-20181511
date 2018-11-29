@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {EventService} from '../app.service';
 
 @Component({
@@ -6,8 +6,17 @@ import {EventService} from '../app.service';
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.css']
 })
-export class WeatherComponent {
+export class WeatherComponent implements OnInit {
 
   constructor(private eventService: EventService) {
+  }
+
+  ngOnInit(): void {
+    this.eventService.hotel$.subscribe(
+      (a) => {
+        console.log('a');
+        console.log(a);
+      }
+    );
   }
 }
