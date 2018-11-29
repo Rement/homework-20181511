@@ -78,5 +78,5 @@ const _data: IData[] = [
 
 export const data: Observable<IData[]> = of(_data)
   .pipe(
-    delay(2000)
+    delay(200)
   );
