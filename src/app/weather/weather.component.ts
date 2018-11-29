@@ -8,7 +8,7 @@ import {EventService} from '../app.service';
 })
 export class WeatherComponent implements OnInit {
 
-  constructor(private eventService: EventService) {
+  constructor(public eventService: EventService) {
   }
 
   ngOnInit(): void {

@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   public hotels$ = data;
 
-  constructor(private eventService: EventService) {
+  constructor(public eventService: EventService) {
   }
 
   ngOnInit(): void {

@@ -8,6 +8,6 @@ import {EventService} from '../app.service';
 })
 export class RatingComponent {
 
-  constructor(private eventService: EventService) {
+  constructor(public eventService: EventService) {
   }
 }

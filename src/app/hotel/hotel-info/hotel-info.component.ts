@@ -11,7 +11,7 @@ export class HotelInfoComponent {
 
   @Input() data: IData;
 
-  constructor(private eventService: EventService) {
+  constructor(public eventService: EventService) {
   }
 
 }

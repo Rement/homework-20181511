@@ -11,11 +11,11 @@ export class HotelComponent implements OnInit {
 
   public allHotelInfo: IData[] = [];
 
-  private starRankingSet: Set<number> = new Set();
+  public starRankingSet: Set<number> = new Set();
 
   public filter: number;
 
-  constructor(private eventService: EventService) {
+  constructor(public eventService: EventService) {
   }
 
   ngOnInit() {
