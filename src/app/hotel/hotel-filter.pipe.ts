@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {IHotel} from './data';
+import {IHotel} from '../data';
 
 @Pipe({
   name: 'hotelFilter'
@@ -15,7 +15,6 @@ export class HotelFilterPipe implements PipeTransform {
         return filter === null ? true : hotel.startCount === filter;
       }
     );
-    return hotelGlobalData;
   }
 
 }

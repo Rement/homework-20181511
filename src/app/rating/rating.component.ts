@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {IRating} from '../data';
 
 @Component({
@@ -6,14 +6,7 @@ import {IRating} from '../data';
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.css']
 })
-export class RatingComponent implements OnInit {
+export class RatingComponent {
 
   @Input() rating: IRating;
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
 }

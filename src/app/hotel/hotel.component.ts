@@ -18,8 +18,6 @@ export class HotelComponent implements OnInit {
 
   public filter: number;
 
-  public initHotel: IHotel;
-
   @Input()
   set hotels(hotels: IData[]) {
     this.allHotelInfo = hotels;
@@ -32,10 +30,6 @@ export class HotelComponent implements OnInit {
   }
 
   @Output() sendHotelData: EventEmitter<IData> = new EventEmitter();
-
-
-  constructor() {
-  }
 
   ngOnInit() {
     this.starRankingSet = new Set(Array.from(this.starRankingSet).sort());

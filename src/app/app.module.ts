@@ -6,8 +6,8 @@ import { HotelComponent } from './hotel/hotel.component';
 import { WeatherComponent } from './weather/weather.component';
 import { RatingComponent } from './rating/rating.component';
 import { HotelInfoComponent } from './hotel/hotel-info/hotel-info.component';
-import { PhonePipePipe } from './phone-pipe.pipe';
-import { HotelFilterPipe } from './hotel-filter.pipe';
+import { PhonePipePipe } from './hotel/hotel-info/phone-pipe.pipe';
+import { HotelFilterPipe } from './hotel/hotel-filter.pipe';
 
 @NgModule({
   declarations: [
